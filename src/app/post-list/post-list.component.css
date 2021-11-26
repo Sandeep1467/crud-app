@@ -1,0 +1,8 @@
+.table{
+    text-align: center;
+    font-style: italic;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: coral;
+    width: max-content;
+}

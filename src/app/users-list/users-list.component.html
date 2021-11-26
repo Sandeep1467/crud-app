@@ -1,0 +1,21 @@
+<p class="text-center"><b>User List Details</b></p>
+<p> Total rows: {{ totalRows }} </p> <br>
+<table *ngIf= "users" class="table">
+    <tr>
+        <th>User Name</th>
+        <th>Contact Number</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor = "let user of users">
+        <td>
+            {{user.name}}
+        </td>
+        <td>
+            {{user.phone}}
+        </td>
+        <td>
+            {{user.email}}
+        </td>
+        <button>View</button>
+    </tr>
+</table>

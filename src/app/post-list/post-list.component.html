@@ -1,0 +1,15 @@
+<p class="text-left"><b>List of Posts</b></p>
+<p> Total rows: {{ totalRows }} </p> <br>
+<a routerLink="form">ADD</a>
+
+<table *ngIf= "posts" class="table">
+    <tr *ngFor = "let post of posts">
+        <td>
+            {{post.userId}}
+            {{post.id}}
+            {{post.title}}
+        </td>
+        <button id="tbn"><a [routerLink]="[post.id]">View</a></button>
+        <!-- <button>View</button> -->
+    </tr>
+</table>

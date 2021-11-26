@@ -1,0 +1,7 @@
+.table{
+    font-style: italic;
+    background-color: coral;
+    border: 1px solid black;
+    width: max-content;
+    height: 100%;
+}

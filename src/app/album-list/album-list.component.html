@@ -1,0 +1,11 @@
+<p class="text-left"><b>List of Albums</b></p>
+<p> Total rows: {{ totalRows }} </p> <br>
+<table *ngIf= "albums" class="table">
+    <tr *ngFor = "let album of albums">
+        <td>
+            {{album.title}}
+        </td>
+        <button>View</button>
+    </tr>
+</table>
+

@@ -1,0 +1,16 @@
+
+.nav-item{
+    margin-left: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(172, 46, 0);
+    width: 20%;
+    height: 100%;
+}
+.content{
+    padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
