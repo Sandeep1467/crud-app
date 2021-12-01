@@ -11,4 +11,7 @@ export class AlbumClientService {
   getAll(){
     return this.http.get(`https://jsonplaceholder.typicode.com/albums`);
   }
+  delete(){
+    
+  }
 }

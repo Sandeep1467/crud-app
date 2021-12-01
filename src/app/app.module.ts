@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { PostFormComponent } from './post-form/post-form.component';
 import { ViewPostDetailComponent } from './view-post-detail/view-post-detail.component';
 import { ViewUserDetailComponent } from './view-user-detail/view-user-detail.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { PostEditFormComponent } from './post-edit-form/post-edit-form.component';
 
 
 const routes:Routes =[
@@ -21,6 +23,8 @@ const routes:Routes =[
   {path:'home',component:HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'posts/:id', component: ViewPostDetailComponent},
+  {path: 'users/:id', component: ViewUserDetailComponent},
+  {path: 'edit/form', component: PostEditFormComponent},
 ]
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ const routes:Routes =[
     HomeComponent,
     PostFormComponent,
     ViewPostDetailComponent,
-    ViewUserDetailComponent
+    ViewUserDetailComponent,
+    UserFormComponent,
+    PostEditFormComponent
   ],
   imports: [
     BrowserModule,

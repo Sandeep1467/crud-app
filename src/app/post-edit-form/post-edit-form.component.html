@@ -1,0 +1,23 @@
+<p>Edit your post!</p>
+<div>
+    <a type="button" class="btn" [routerLink]="['../../']">Back</a>
+</div>
+<div>
+    <button type="button" (click)="save()">Save</button>
+    <button type="button" (click)="discard()">Discard</button>
+</div>
+<div>
+    <form action="">
+        <label for="userId">User ID</label><br>
+        <input type="number" placeholder="">
+    </form>
+    <form action="">
+        <label for="title">Title</label><br>
+        <input type="string" placeholder="">
+    </form>
+    <form action="">
+        <label for="body">Body</label><br>
+        <input type="string" placeholder="">
+    </form>
+</div>
+<pre>{{myReactiveForm.value | json}}</pre>

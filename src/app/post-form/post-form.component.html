@@ -1,7 +1,10 @@
-<p>Post Form</p>
+<p>Create post!</p>
 <div>
-    <button>Save</button>
-    <button>Discard</button>
+    <a type="button" [routerLink]="['../../']"></a>
+</div>
+<div>
+    <button type="button" (click) = "addValue()">Add</button>
+    <button type="button" (click) = "reset()">Discard</button>
 </div>
 <div>
     <form action="">

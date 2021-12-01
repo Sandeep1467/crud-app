@@ -16,6 +16,7 @@
         <td>
             {{user.email}}
         </td>
-        <button>View</button>
+        <button id="btn2"(click)="delete(user.id)">Delete</button>
+        <button id="btn"><a [routerLink]="[user.id]">View</a></button>
     </tr>
 </table>

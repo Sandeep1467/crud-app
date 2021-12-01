@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PostClientService } from '../post-client.service';
 
 @Component({
@@ -8,18 +9,28 @@ import { PostClientService } from '../post-client.service';
 })
 export class PostListComponent implements OnInit {
   
-  constructor(private postClient:PostClientService) { }
+  constructor(private postClient:PostClientService, private router:Router) { }
   posts:any; 
+
   ngOnInit(): void {
-    
-    console.log("0");
 
     this.postClient.getAll().subscribe(data => {
       this.posts = data;
-      console.log("1");
-    });  
+      console.log(this.posts);
+    })
   }
   get totalRows(): number {
     return this.posts.length;
   }
+  delete(id:number){
+    this.postClient.deletePost(id).subscribe(data => {
+      alert("Row Deleted");
+    });
+  }
+}
+export interface IPost {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
 }

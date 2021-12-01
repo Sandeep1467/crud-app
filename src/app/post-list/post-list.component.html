@@ -9,7 +9,10 @@
             {{post.id}}
             {{post.title}}
         </td>
-        <button id="tbn"><a [routerLink]="[post.id]">View</a></button>
-        <!-- <button>View</button> -->
+        <td>
+            <button id="btn2"(click)="delete(post.id)">Delete</button>
+            <button id="btn"><a [routerLink]="[post.id]">View</a></button>
+            <button (click)="edit()">Edit</button>
+        </td>
     </tr>
 </table>
